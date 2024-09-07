@@ -4,10 +4,20 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #000;
+    background: #000 url('wall.png') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.button-frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .glow-on-hover {
@@ -21,6 +31,7 @@ body {
     position: relative;
     z-index: 0;
     border-radius: 10px;
+    margin: 0 10px;
 }
 
 .glow-on-hover span {
@@ -47,7 +58,8 @@ body {
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
-    display: block; /* Add this line */
+    display: block;
+    /* Add this line */
 }
 
 .glow-on-hover:active {
@@ -72,6 +84,32 @@ body {
     left: 0;
     top: 0;
     border-radius: 10px;
+}
+
+#messages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#messages-list li {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#messages-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#messages-list input[type="number"] {
+    width: 50px;
+    margin-left: 10px;
+}
+
+#messages-list label {
+    color: #fff;
 }
 
 @keyframes glowing {
